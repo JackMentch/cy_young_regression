@@ -100,15 +100,32 @@ aaron_nola = list(aaron_nola.values())
 max_scherzer = list(max_scherzer.values())
 robbie_ray = list(robbie_ray.values())
 
-print(f"2021 Expected Gerrit Cole CY Young Votes: {int(best_performing_model.ml.predict([gerrit_cole])[0])}")
-print(f"2021 Expected Zack Wheeler CY Young Votes: {int(best_performing_model.ml.predict([zack_wheeler])[0])}")
-print(f"2021 Expected Jake Arrieta CY Young Votes: {int(best_performing_model.ml.predict([jake_arrieta])[0])}")
-print(f"2021 Expected Lance Lynn CY Young Votes: {int(best_performing_model.ml.predict([lance_lynn])[0])}")
+# NL
 print(f"2021 Expected Corbin Burnes CY Young Votes: {int(best_performing_model.ml.predict([corbin_burnes])[0])}")
-print(f"2021 Expected Aaron Nola CY Young Votes: {int(best_performing_model.ml.predict([aaron_nola])[0])}")
 print(f"2021 Expected Max Scherzer CY Young Votes: {int(best_performing_model.ml.predict([max_scherzer])[0])}")
-print(f"2021 Expected Robbie Ray CY Young Votes: {int(best_performing_model.ml.predict([robbie_ray])[0])}")
+print(f"2021 Expected Zack Wheeler CY Young Votes: {int(best_performing_model.ml.predict([zack_wheeler])[0])}\n")
 
+# AL
+print(f"2021 Expected Robbie Ray CY Young Votes: {int(best_performing_model.ml.predict([robbie_ray])[0])}")
+print(f"2021 Expected Gerrit Cole CY Young Votes: {int(best_performing_model.ml.predict([gerrit_cole])[0])}")
+print(f"2021 Expected Lance Lynn CY Young Votes: {int(best_performing_model.ml.predict([lance_lynn])[0])}\n")
+
+# Random Tests
+print(f"2021 Expected Jake Arrieta CY Young Votes: {int(best_performing_model.ml.predict([jake_arrieta])[0])}")
+print(f"2021 Expected Aaron Nola CY Young Votes: {int(best_performing_model.ml.predict([aaron_nola])[0])}\n")
+
+
+# Current Betting Lines Odds:
+
+# NL - Corbin Burnes +100
+# NL - Max Scherzer +115
+# NL - Zack Wheeler +875
+
+# AL - Robbie Ray -513
+# AL - Gerrit Cole +390
+# AL - Lance Lynn +875
+
+# The model predictions arent perfect in reference to the betting lines but it often gets the order correct in terms of likelihood
 
 coefficients = zip(list(df.drop(['votes', 'player_id'],axis=1).columns), best_performing_model.ml.coef_)
 
