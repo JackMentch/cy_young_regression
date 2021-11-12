@@ -20,3 +20,20 @@ estimate the number of Cy Young votes a pitcher will receive.
 * __Walks per 9 innings__ _(bb_per_nine)_
 * __Strikeouts per 9 innings__ _(strikeouts_per_nine)_
 
+## Future Work to Improve Model:
+- Normalize the dataset that we feed to the algorithm
+  
+
+- Cy Young votes are based on what league you play in. 
+  In theory, a pitcher could be in the 90th percentile
+  in MLB but be in the 99th percentile of the National/American League.
+  Votes are dependent on a pitcher's respective league competition. The model should account for this.
+  
+
+- Regression Splines - Since the model is linear, players in the bottom percentile can receive negative
+Cy Young votes. Regression spline can ensure more accurate estimations for players in any percentile.
+
+
+## Credits:
+- Baseball-Reference.com for generating the dataset
+- Sklearn for the linear regression toolkit
