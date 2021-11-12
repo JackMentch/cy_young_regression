@@ -91,7 +91,6 @@ for model in list_of_models:
 print(f"Optimal Model Accuracy: {best_performing_model.accuracy()}\n")
 
 # With the best performing model, we will estimate how many votes each player will get
-
 gerrit_cole = list(gerrit_cole.values())
 zack_wheeler = list(zack_wheeler.values())
 jake_arrieta = list(jake_arrieta.values())

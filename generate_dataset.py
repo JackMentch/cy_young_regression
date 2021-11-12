@@ -6,27 +6,33 @@ import re
 start_year = 2000
 end_year = 2021
 
+# What variables we want to collect for our model
 column_names = ["player_id", "votes", "baa", "ops", "strkpct", "bbpct", "wpa",
                 "bors", "era",  "strikeouts",
                 "era_plus", "fip", "whip", "bb_per_nine", "strikeouts_per_nine"]
 
+# Instantiate the pandas dataframe
 df = pd.DataFrame(columns = column_names)
 
-
+# We want both standard and advanced pitching stats
 stats = ["standard", "advanced"]
 
 for stat in stats:
 
     for year in range(start_year, end_year):
 
+        # generate the http endpoint we would like to parse data from
         link = f"https://www.baseball-reference.com/leagues/majors/{year}-{stat}-pitching.shtml"
 
+        # convert the link to a parseable bs object
         html = urlopen(link)
         bsObj = BeautifulSoup(html.read(), features="lxml")
 
+        # Baseball Reference comments out it's html data, so we must find the comments and uncomment it
         comments = bsObj.findAll(string=lambda text: isinstance(text, Comment))
 
         for c in comments:
+
             # convert the comment to BS Object
             c_string = BeautifulSoup(str(c), features="lxml")
 
