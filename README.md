@@ -31,7 +31,12 @@ extensive runtime to compute.
 
 ----
 
-<img src="images/speedup.png" width="500"/>
+<img src="images/speedup.png" width="650"/>
+
+----
+
+<img src="images/breakdown1.png" width="650"/>
+<img src="images/breakdown2.png" width="650"/>
 
 ## Independent Variables:
 * __Batting Average Against__ _(baa)_
