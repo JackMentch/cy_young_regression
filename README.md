@@ -1,9 +1,33 @@
 # Predicting 2021 Cy Young Awards
 
-This project is a simple multiple linear regression model used to 
-estimate the number of Cy Young votes a pitcher will receive.
+<h3 align="left">Goals:</h3>
 
-![equation](https://miro.medium.com/max/1400/1*jOjxZ5g0RFJN0PqdR-G-Ug.png)
+__Non-technical:__ What pitching statistics are the best predictors
+for who wins the Cy Young.
+
+__Technical:__ Given a dataset (such as the one below), 
+what combination of features generates a Linear Regression model with the highest accuracy (in terms of R2 Score).
+
+![dataset.png](images/dataset.png)
+
+----
+
+<h3 align="left">Tasks to accomplish goals:</h3>
+
+* Generate a dataset
+* Generate a subset of the dataset
+* Fit each subset to a linear regression model
+* Calculate accuracy (R2 Score) of each model
+* Choose the model with the highest score
+
+<h3 align="left">The issue we face:</h3>
+
+Let's say our dataset has __15__ variables, and we want to generate all combinations of __8__
+
+![combinations.png](images/pic.png)
+
+<img src="images/pic.png"/>
+
 
 ## Independent Variables:
 * __Batting Average Against__ _(baa)_

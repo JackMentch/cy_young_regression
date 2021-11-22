@@ -3,13 +3,11 @@ from bs4 import BeautifulSoup, Comment
 import pandas as pd
 import re
 
-start_year = 2000
-end_year = 2021
+start_year = 2010
+end_year = 2019
 
 # What variables we want to collect for our model
-column_names = ["player_id", "votes", "baa", "ops", "strkpct", "bbpct", "wpa",
-                "bors", "era",  "strikeouts",
-                "era_plus", "fip", "whip", "bb_per_nine", "strikeouts_per_nine"]
+column_names = ["player_id", "votes"]
 
 # Instantiate the pandas dataframe
 df = pd.DataFrame(columns = column_names)
@@ -55,14 +53,13 @@ for stat in stats:
 
                         df.at[index,'baa'] = baa = pitcher.find("td", {"data-stat": "adv_pitch_batting_avg"}).get_text()
                         df.at[index,'ops'] = ops = pitcher.find("td", {"data-stat": "adv_pitch_onbase_plus_slugging"}).get_text()
-
                         df.at[index,'strkpct'] = strkpct = pitcher.find("td", {"data-stat": "adv_pitch_strikeout_perc"}).get_text().replace("%", "")
                         df.at[index,'bbpct'] = bbpct = pitcher.find("td", {"data-stat": "adv_pitch_base_on_balls_perc"}).get_text().replace("%", "")
-
                         df.at[index,'wpa'] = wpa = pitcher.find("td", {"data-stat": "adv_pitch_wpa_def"}).get_text()
                         df.at[index,'bors'] = bors = pitcher.find("td", {"data-stat": "adv_pitch_re24_def"}).get_text()
-
-
+                        df.at[index,'slg'] = slg = pitcher.find("td", {"data-stat": "adv_pitch_slugging_perc"}).get_text()
+                        df.at[index,'obp'] = obp = pitcher.find("td", {"data-stat": "adv_pitch_onbase_perc"}).get_text()
+                        df.at[index,'babip'] = babip = pitcher.find("td", {"data-stat": "adv_pitch_babip"}).get_text()
 
 
 
@@ -79,6 +76,11 @@ for stat in stats:
                         df.at[index,'whip'] = whip = pitcher.find("td", {"data-stat": "whip"}).get_text()
                         df.at[index,'bb_per_nine'] = bb_per_nine = pitcher.find("td", {"data-stat": "bases_on_balls_per_nine"}).get_text()
                         df.at[index,'strikeouts_per_nine'] = strikeouts_per_nine = pitcher.find("td", {"data-stat": "strikeouts_per_nine"}).get_text()
+                        df.at[index,'wins'] = wins = pitcher.find("td", {"data-stat": "W"}).get_text()
+                        df.at[index,'losses'] = losses = pitcher.find("td", {"data-stat": "L"}).get_text()
+                        df.at[index,'innings'] = innings = pitcher.find("td", {"data-stat": "IP"}).get_text()
+                        df.at[index,'er'] = er = pitcher.find("td", {"data-stat": "ER"}).get_text()
+
 
 
 for year in range(start_year, end_year):
