@@ -35,8 +35,8 @@ extensive runtime to compute.
 
 ----
 
-<img src="images/breakdown1.png" width="750"/>
-<img src="images/breakdown2.png" width="750"/>
+<img src="images/breakdown1.png" width="800"/>
+<img src="images/breakdown2.png" width="800"/>
 
 ## Getting Started:
 
