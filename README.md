@@ -8,7 +8,7 @@ for who wins the Cy Young.
 __Technical:__ Given a dataset (such as the one below), 
 what combination of features generates a Linear Regression model with the highest accuracy (in terms of R2 Score).
 
-<img src="images/dataset.png" width="400" class="center"/>
+<center><img src="images/dataset.png" width="400" class="center"/></center>
 
 ----
 
@@ -24,7 +24,7 @@ what combination of features generates a Linear Regression model with the highes
 
 Let's say our dataset has __15__ variables, and we want to generate all combinations of __8__
 
-<img src="images/combinations.png" width="300"/>
+<center><img src="images/combinations.png" width="300"/></center>
 
 
 ## Independent Variables:
