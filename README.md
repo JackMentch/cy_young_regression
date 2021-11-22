@@ -24,7 +24,7 @@ what combination of features generates a Linear Regression model with the highes
 
 Let's say our dataset has __15__ variables, and we want to generate all combinations of __8__
 
-<img src="images/combinations.png" width="300" class="center"/>
+<img src="images/combinations.png" width="300"/>
 
 
 ## Independent Variables:
