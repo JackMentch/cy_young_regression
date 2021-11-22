@@ -15,7 +15,7 @@ what combination of features generates a Linear Regression model with the highes
 <h3 align="left">Tasks to accomplish goals:</h3>
 
 * Generate a dataset
-* Generate a subset of the dataset
+* Generate subsets of the dataset
 * Fit each subset to a linear regression model
 * Calculate accuracy (R2 Score) of each model
 * Choose the model with the highest score
@@ -61,7 +61,7 @@ __generate_dataset.py__: Parses baseball-reference.com and generates a .csv that
 __testing_dataset.py__: Parses baseball-reference.com and generates a .csv that contains the data used for making predictions 
 once the optimal model is found
 
-__model.py__: Every linear regression model is stored as a model object. This file defines the object's attributes/methods
+__model.py__: Every linear regression model is stored as a model object. This file defines the object and its attributes/methods
 
 __optimal_model.py__: Since most players do not receive any Cy Young votes, this script finds the optimal number
 of players to remove that have 0 votes. This ensures our dataset isn't biased by players with 0 votes. 
