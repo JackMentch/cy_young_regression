@@ -21,7 +21,7 @@ def consumer_task(q, list_of_models):
 
 if __name__ == '__main__':
 
-    df = pd.read_csv('data.csv')
+    df = pd.read_csv('data/data.csv')
 
     manager = Manager()
     df_subsets = manager.Queue()
@@ -58,7 +58,7 @@ if __name__ == '__main__':
     print(f"\nAverage Accuracy: {accuracy/len(list_of_models)}")
     print(f"Best Performing Model Accuracy: {max_accuracy}")
 
-    test_df = pd.read_csv('testing_data.csv')
+    test_df = pd.read_csv('data/testing_data.csv')
 
     variables_to_drop = list((Counter(test_df.columns.values.tolist()) - Counter(best_model.columns)).elements())
 

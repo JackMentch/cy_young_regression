@@ -57,7 +57,7 @@ $ python main.py
 ## Results:
 
 When you run the program, the first thing you will notice are the running Processes. Notice that once a Process is finished
-with its dataset, it will grab the next one off of the stack until the stack is empty.
+with its dataset, it will grab the next one off of the queue until the stack is empty.
 
 <img src="images/processes.png" width="500"/>
 

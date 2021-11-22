@@ -119,4 +119,4 @@ df['votes'] = df['votes'].fillna(0)
 
 df = df[df['votes'] > 30]
 
-df.to_csv("testing_data.csv", encoding='utf-8', index=False)
+df.to_csv("data/testing_data.csv", encoding='utf-8', index=False)

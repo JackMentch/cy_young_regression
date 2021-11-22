@@ -122,5 +122,5 @@ for year in range(start_year, end_year):
 # For all the players that didn't recieve Cy Young votes, fill the value with a 0 not a NaN
 df['votes'] = df['votes'].fillna(0)
 
-df.to_csv("data.csv", encoding='utf-8', index=False)
+df.to_csv("data/data.csv", encoding='utf-8', index=False)
 
