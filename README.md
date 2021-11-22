@@ -38,20 +38,21 @@ extensive runtime to compute.
 <img src="images/breakdown1.png" width="650"/>
 <img src="images/breakdown2.png" width="650"/>
 
-## Independent Variables:
-* __Batting Average Against__ _(baa)_
-* __On-base Plus Slugging__ _(ops)_
-* __Strikeout Percentage__ _(strkpct)_
-* __Walk Percentage__ _(bbpct)_
-* __Win Probability Added by Pitcher__ _(wpa)_
-* __Base-Outs Runs Saved__ _(bors)_
-* __Earned Run Average__ _(era)_
-* __Strikeouts__ _(strikeouts)_
-* __Earned Run Average Plus__ _(era_plus)_
-* __Fielding Independent Pitching__ _(fip)_
-* __Walks Hits per Innings Pitched__ _(whip)_
-* __Walks per 9 innings__ _(bb_per_nine)_
-* __Strikeouts per 9 innings__ _(strikeouts_per_nine)_
+## Getting Started:
+
+To run the program locally, execute the following lines into terminal:
+
+```sh
+$ git clone https://github.com/JackMentch/cy_young_regression.git
+$ cd cy_young_regression
+$ python -m venv cy_young_regression
+$ pip install -r requirements.txt
+```
+
+Once the program is ready you can then run
+```sh
+$ python main.py
+```
 
 ## Future Work to Improve Model:
 - Normalize the dataset that we feed to the algorithm
