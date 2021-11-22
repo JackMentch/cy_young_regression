@@ -26,7 +26,7 @@ Let's say our dataset has __15__ variables, and we want to generate all combinat
 
 ![combinations.png](images/pic.png)
 
-<img src="images/pic.png"/>
+<img src="images/pic.png" width="200"/>
 
 
 ## Independent Variables:
